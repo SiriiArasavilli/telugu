@@ -43,7 +43,7 @@ def recommend(movie_name):
         return [], []
 
 # Load movie data
-movies_dict = pickle.load(open('telugu\movie_dict.pkl', 'rb'))
+movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
 movies = pd.DataFrame(movies_dict)
 
 # Load similarity matrix
