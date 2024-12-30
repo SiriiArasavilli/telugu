@@ -49,7 +49,9 @@ movies_dict = pickle.load(open(os.path.join(os.path.dirname(os.path.abspath(__fi
 movies = pd.DataFrame(movies_dict)
 
 # Load similarity matrix
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+import os
+similarity = pickle.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'similarity.pkl'), 'rb'))
+
 
 # Streamlit UI
 st.title('Movie Recommender System')
